@@ -227,9 +227,7 @@ sudo usermod -a -G dialout $USER
 
 ## License
 
-Educational and interoperability project for SuperB Epsilon V2 BMS.
-
-Firmware files are property of Super B Battery Management.
+GPLv3 
 
 ## Credits
 
