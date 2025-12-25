@@ -2,7 +2,7 @@
 
 Production-grade firmware updater for SuperB Epsilon V2 battery management system with automatic BIN→HEX conversion.
 
-## 🎉 What's New in v2.1 (Dec 25, 2025)
+## What's New in v2.1 (Dec 25, 2025)
 
 - ✅ **Automatic BIN→HEX Conversion** - Upload .bin files directly, automatic Intel HEX conversion
 - ✅ **Correct Base Address** - Fixed 0x08018000 application region
