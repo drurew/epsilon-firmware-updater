@@ -222,6 +222,7 @@ sudo usermod -a -G dialout $USER
 **From SuperB Website**:
 - Epsilon_V2_Application_v1.2.5.hex (Dec 2022)
 - Epsilon_V2_Application_v1.3.5.hex (Dec 2025 - Latest)
+- Various versions available from apkpure
 
 **Format**: Intel HEX with proper addressing for STM32L452
 
