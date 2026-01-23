@@ -310,22 +310,23 @@ def parse_intel_hex(hex_file: str) -> bytes:
 
 
 def main():
-    if len(sys.argv) < 4:
-        print("Usage: update_firmware.py <node_id> <hex_file> <can_interface>")
+    if len(sys.argv) < 3:
+        print("Usage: update_firmware.py <node_id> <hex_file> [can_interface]")
         print()
         print("Arguments:")
         print("  node_id        CANopen node ID (1-127)")
         print("  hex_file       Path to Intel HEX firmware file")
-        print("  can_interface  SocketCAN interface (e.g., can0, vcan0)")
+        print("  can_interface  SocketCAN interface (e.g., can0, vecan0). Default: can0")
         print()
         print("Examples:")
         print("  python3 update_firmware.py 1 firmware.hex can0")
-        print("  python3 update_firmware.py 2 Epsilon_V2_v1.2.5.hex can1")
+        print("  python3 update_firmware.py 2 Epsilon_V2_v1.2.5.hex vecan0")
         sys.exit(1)
     
     node_id = int(sys.argv[1])
     hex_file = sys.argv[2]
-    can_interface = sys.argv[3]
+    # Default to can0 if not provided
+    can_interface = sys.argv[3] if len(sys.argv) > 3 else 'can0'
     
     print("="*70)
     print(f"FIRMWARE UPDATE - Node {node_id}")
