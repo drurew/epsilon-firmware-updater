@@ -1,14 +1,20 @@
 # Epsilon V2 Firmware Updater
 
-Open-source firmware updater for SuperB Epsilon V2 BMS modules using the CANopen protocol. This tool enables firmware updates and recovery without requiring expensive proprietary hardware.
+Open-source firmware updater for SuperB Epsilon V2 BMS modules using the CANopen protocol. This tool enables firmware updates and **recovery of "bricked" units** without requiring expensive proprietary hardware.
+
+> 🚨 **Critical Information**
+>
+> If your battery is dead after a v1.3.5 update, read the [Forensic Crash Analysis](docs/FIRMWARE_CRASH_ANALYSIS.md) to understand why.
+>
+> For the complete CANopen technical reference, see the [Epsilon V2 Datasheet](../superb-victron-integration/DATASHEET.md).
 
 ## Features
 
 - ✅ **Firmware Update:** Upload new firmware to BMS modules
-- ✅ **Firmware Recovery:** Recover bricked modules stuck in bootloader mode
+- ✅ **Firmware Recovery:** Recover modules stuck in "Silent Boot Loop" (v1.3.5 Brick Fix)
+- ✅ **Robust Protocol:** Uses **Segmented Download** (standard SDO) which is more reliable than the official Block Download.
+- ✅ **Safe:** Does **NOT** touch the Bootloader (Sector 0).
 - ✅ **Multi-Node Support:** Update any node ID on the CAN bus
-- ✅ **Progress Monitoring:** Real-time upload progress and speed metrics
-- ✅ **Automatic Retry:** Built-in retry logic for reliable updates
 
 ## Hardware Requirements
 
